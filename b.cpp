@@ -2,6 +2,6 @@
 
 using namespace std;
 
-void b() {
+extern "C" void b() {
   cout << "IOSTREAM!" << endl;
 }
