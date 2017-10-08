@@ -1,0 +1,8 @@
+[package]
+name = "test-sys"
+version = "0.1.0"
+authors = ["fedor <fedor>"]
+build = "build.rs"
+
+[build-dependencies]
+cc = "1.0"
