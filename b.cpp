@@ -9,9 +9,6 @@ B::~B() {
   printf("~B\n");
 }
 
-A new_A() {
-  return A();
-}
 
 B new_B() {
   return B();
