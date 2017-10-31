@@ -1,7 +1,18 @@
-#include <iostream>
+#include "test.hpp"
 
-using namespace std;
+#include <stdio.h>
 
-extern "C" void b() {
-  cout << "IOSTREAM!" << endl;
+A::~A() {
+  printf("~A\n");
+}
+B::~B() {
+  printf("~B\n");
+}
+
+A new_A() {
+  return A();
+}
+
+B new_B() {
+  return B();
 }
