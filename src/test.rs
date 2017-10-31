@@ -20,10 +20,6 @@ fn bindgen_test_layout_A() {
         concat!("Alignment of ", stringify!(A))
     );
 }
-extern "C" {
-    #[link_name = "\u{1}_ZN1AD0Ev"]
-    pub fn A_A_destructor(this: *mut A);
-}
 #[repr(C)]
 #[derive(Debug)]
 pub struct B {
