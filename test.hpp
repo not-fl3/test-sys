@@ -1,11 +1,14 @@
 //#include "btScalar.h"
 
-//ATTRIBUTE_ALIGNED16(class) A {
-struct A {
-    virtual ~A() = 0;
+class bar {
+public:
+    int someWeirdData[666];
 };
 
-struct B : A {
-    B() {}
-    ~B();
+class foo {
+public:
+    foo(bar *bar);
+
+    void hihihi();
 };
+

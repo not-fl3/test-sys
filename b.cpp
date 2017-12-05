@@ -2,14 +2,11 @@
 
 #include <stdio.h>
 
-A::~A() {
-  printf("~A\n");
-}
-B::~B() {
-  printf("~B\n");
+
+foo::foo(bar *bar) {
+    printf("foo foo foo foo foo foo\n");
 }
 
-
-B new_B() {
-  return B();
+void foo::hihihi() {
+    printf("WTF WTF WTF\n");
 }
