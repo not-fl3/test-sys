@@ -46,16 +46,16 @@ fn bindgen_test_layout_foo() {
         concat!("Alignment of ", stringify!(foo))
     );
 }
-extern "C" {
-    #[link_name = "_ZN3foo6hihihiEv"]
+extern "thiscall" {
+    #[link_name = "\u{1}__ZN3foo6hihihiEv"]
     pub fn foo_hihihi(this: *mut foo);
 }
-extern "C" {
-    #[link_name = "_ZN3fooC1Ev"]
+extern "thiscall" {
+    #[link_name = "\u{1}__ZN3fooC1Ev"]
     pub fn foo_foo(this: *mut foo);
 }
-extern "C" {
-    #[link_name = "_ZN3fooC1EP3bar"]
+extern "thiscall" {
+    #[link_name = "\u{1}__ZN3fooC1EP3bar"]
     pub fn foo_foo1(this: *mut foo, bar: *mut bar);
 }
 impl foo {

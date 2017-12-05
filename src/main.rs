@@ -1,3 +1,5 @@
+#![feature(abi_thiscall)]
+
 mod test;
 
 fn main() {
