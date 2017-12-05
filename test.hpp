@@ -7,6 +7,7 @@ public:
 
 class foo {
 public:
+    foo();
     foo(bar *bar);
 
     void hihihi();

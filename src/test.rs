@@ -51,8 +51,12 @@ extern "C" {
     pub fn foo_hihihi(this: *mut foo);
 }
 extern "C" {
+    #[link_name = "_ZN3fooC1Ev"]
+    pub fn foo_foo(this: *mut foo);
+}
+extern "C" {
     #[link_name = "_ZN3fooC1EP3bar"]
-    pub fn foo_foo(this: *mut foo, bar: *mut bar);
+    pub fn foo_foo1(this: *mut foo, bar: *mut bar);
 }
 impl foo {
     #[inline]
@@ -60,9 +64,15 @@ impl foo {
         foo_hihihi(self)
     }
     #[inline]
-    pub unsafe fn new(bar: *mut bar) -> Self {
+    pub unsafe fn new() -> Self {
         let mut __bindgen_tmp = ::std::mem::uninitialized();
-        foo_foo(&mut __bindgen_tmp, bar);
+        foo_foo(&mut __bindgen_tmp);
+        __bindgen_tmp
+    }
+    #[inline]
+    pub unsafe fn new1(bar: *mut bar) -> Self {
+        let mut __bindgen_tmp = ::std::mem::uninitialized();
+        foo_foo1(&mut __bindgen_tmp, bar);
         __bindgen_tmp
     }
 }
